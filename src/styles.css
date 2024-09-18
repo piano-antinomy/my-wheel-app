@@ -1,0 +1,115 @@
+body {
+  background-color: #FFFC00;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  padding: 20px;
+}
+
+.snap-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.wheel-container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  cursor: pointer;
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #333;
+  transition: transform 5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.wheel-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+
+.wheel-item-content {
+  position: absolute;
+  left: -100%;
+  width: 200%;
+  text-align: center;
+  top: 15px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  font-size: 18px;
+}
+
+.wheel-center {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.rotating {
+  transition: transform 5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.person-display-container {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person-display {
+  text-align: center;
+}
+
+.person-display img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.person-display h2 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.person-display p {
+  margin: 0;
+  font-size: 18px;  /* Increased font size for intro text */
+  line-height: 1.5; /* Added line height for better readability */
+  text-align: left; /* Align text to the left for easier reading */
+}
